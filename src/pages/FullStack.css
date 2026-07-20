@@ -1,0 +1,306 @@
+/* ── FULLSTACK — BRUTALIST POSTER THEME ── */
+
+.fs-brutal-page {
+  background: #00E5FF;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 0;
+}
+
+/* ── 1. HERO POSTER ── */
+.fs-hero-poster {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fs-hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 12vw, 12rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+.fs-hero-title span { display: block; }
+
+.fs-hero-graphic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1000px;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.3;
+}
+.fs-line-art { width: 100%; height: auto; }
+
+/* Floating Actions */
+.fs-float-action {
+  position: absolute;
+  top: 55%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  color: #c70039;
+  text-decoration: none;
+  z-index: 20;
+  transition: transform 0.3s ease;
+}
+.fs-float-action:hover { transform: scale(1.05); }
+.fs-circle-red {
+  width: 30px;
+  height: 30px;
+  background: #c70039;
+  border-radius: 50%;
+}
+.fs-float-left { left: 5%; }
+.fs-float-right { right: 5%; flex-direction: row-reverse; }
+
+.fs-hero-slant {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0% 100%);
+  background: #fff;
+  z-index: 15;
+}
+.fs-slant-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1) saturate(1.2);
+}
+
+/* ── 2. TICKER TAPE ── */
+.fs-ticker-wrap {
+  width: 100%;
+  background: #111;
+  color: #00E5FF;
+  padding: 20px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 4px solid #111;
+  border-bottom: 4px solid #111;
+}
+.fs-ticker {
+  display: inline-block;
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 900;
+  font-size: 2rem;
+  animation: fs-scroll 20s linear infinite;
+}
+.fs-ticker span { padding-right: 50px; }
+@keyframes fs-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── 3. STATS SECTION ── */
+.fs-stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 4px solid #111;
+}
+.fs-stat-box {
+  padding: 60px 20px;
+  text-align: center;
+  border-right: 4px solid #111;
+}
+.fs-stat-box:last-child { border-right: none; }
+.fs-stat-box h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.fs-stat-box p {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* ── 4. PROJECTS LIST ── */
+.fs-projects-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 5vw;
+}
+.fs-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.9;
+  margin-bottom: 80px;
+  color: #111;
+}
+.fs-project-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #111;
+}
+.fs-project-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px 50px;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 4px solid #111;
+  transition: all 0.3s ease;
+}
+.fs-project-row:hover {
+  background: #c70039;
+  color: #fff;
+  cursor: pointer;
+  padding-left: 20px;
+}
+.fs-pr-year {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.fs-pr-info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.fs-pr-info p {
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+.fs-pr-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.fs-pr-stack span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.fs-project-row:hover .fs-pr-stack span { color: #00E5FF; }
+
+.fs-pr-arrow {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: right;
+  transition: transform 0.3s ease;
+}
+.fs-project-row:hover .fs-pr-arrow {
+  transform: translate(5px, -5px);
+}
+
+/* ── 5. SKILLS GRID ── */
+.fs-skills-section {
+  border-top: 4px solid #111;
+  border-bottom: 4px solid #111;
+  background: #fff;
+}
+.fs-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fs-skill-cell {
+  padding: 60px 40px;
+  border-right: 4px solid #111;
+  color: #111;
+}
+.fs-skill-cell:last-child { border-right: none; }
+.fs-skill-cell h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.fs-skill-cell p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* ── 6. FOOTER ── */
+.fs-brutal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 5vw;
+  background: #111;
+  color: #fff;
+}
+.fs-footer-col h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.fs-footer-col p { font-size: 1rem; color: #888; }
+.fs-footer-col.fs-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+  justify-content: center;
+}
+.fs-footer-col.fs-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.fs-footer-col.fs-right a:hover { color: #00E5FF; }
+
+/* ── ANIMATIONS ── */
+.fs-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fs-reveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width: 1024px) {
+  .fs-skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .fs-skill-cell:nth-child(2) { border-right: none; }
+  .fs-skill-cell:nth-child(1), .fs-skill-cell:nth-child(2) { border-bottom: 4px solid #111; }
+}
+
+@media(max-width: 900px) {
+  .fs-stats-section { grid-template-columns: 1fr; }
+  .fs-stat-box { border-right: none; border-bottom: 4px solid #111; }
+  .fs-stat-box:last-child { border-bottom: none; }
+  
+  .fs-float-action { position: relative; top: 0; margin: 20px 0; font-size: 2rem; }
+  .fs-float-left { align-self: flex-start; left: 0; }
+  .fs-float-right { align-self: flex-end; right: 0; }
+  
+  .fs-project-row { grid-template-columns: 1fr; gap: 15px; padding: 30px 0; }
+  .fs-pr-arrow { display: none; }
+}
+
+@media(max-width: 768px) {
+  .fs-skills-grid { grid-template-columns: 1fr; }
+  .fs-skill-cell { border-right: none; border-bottom: 4px solid #111; }
+  .fs-brutal-footer { flex-direction: column; gap: 40px; text-align: center; }
+  .fs-footer-col.fs-right { text-align: center; }
+}

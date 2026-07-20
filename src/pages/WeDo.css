@@ -1,0 +1,369 @@
+/* ── WEDO OLD MONEY AESTHETIC V2 (HERITAGE LUXURY) ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap');
+
+.wedo-page {
+  background-color: #F4F2EB; /* Warm Ivory / Paper */
+  color: #1A3626; /* Deep Forest Green as base text */
+  min-height: 100vh;
+  padding: 100px 4vw 60px 4vw;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+}
+
+/* ── DOUBLE BORDER FRAMING ── */
+.wd-frame-outer {
+  border: 1px solid #1A3626;
+  padding: 12px; /* Space between double borders */
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.wd-frame-inner {
+  border: 1px solid #1A3626;
+  padding: 6vw 4vw;
+  position: relative;
+  background: #F9F8F6; /* Slightly lighter inner background */
+}
+
+/* ── WAX SEAL MONOGRAM ── */
+.wd-monogram-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -8vw; /* Pull it up into the border */
+  margin-bottom: 60px;
+}
+.wd-monogram {
+  width: 80px;
+  height: 80px;
+  background-color: #1A3626;
+  color: #C5A059; /* Gold */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  border: 2px solid #F9F8F6;
+  outline: 1px solid #1A3626;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ── REVEAL ANIMATIONS ── */
+.wd-reveal {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 1.5s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.wd-reveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── HERO: THE TITLE PAGE ── */
+.wd-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.wd-top-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+  color: #1A3626;
+  margin-bottom: 80px;
+  border-bottom: 1px solid rgba(26, 54, 38, 0.2);
+  padding-bottom: 20px;
+}
+
+.wd-title-wrapper {
+  margin-bottom: 60px;
+}
+.wd-title {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #1A3626; 
+  letter-spacing: -0.01em;
+}
+.wd-title-script {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-style: italic;
+  font-weight: 400;
+  color: #C5A059; /* Gold accent */
+  display: block;
+  margin-bottom: -15px;
+}
+.wd-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: rgba(26, 54, 38, 0.8);
+}
+
+/* Diamond Divider */
+.wd-hero-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(26, 54, 38, 0.3);
+  margin: 60px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wd-divider-diamond {
+  width: 10px;
+  height: 10px;
+  background-color: #C5A059;
+  transform: rotate(45deg);
+}
+
+.wd-hero-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #1A3626;
+}
+.wd-dot {
+  font-size: 1rem;
+  color: #C5A059;
+}
+
+/* ── THE LEDGER: STATS ── */
+.wd-ledger {
+  border-top: 1px solid rgba(26, 54, 38, 0.2);
+  border-bottom: 1px solid rgba(26, 54, 38, 0.2);
+  padding: 50px 0;
+  margin-bottom: 100px;
+}
+.wd-ledger-row {
+  display: flex;
+  justify-content: space-between;
+}
+.wd-ledger-col {
+  text-align: center;
+  flex: 1;
+  border-right: 1px dotted rgba(26, 54, 38, 0.3);
+}
+.wd-ledger-col:last-child {
+  border-right: none;
+}
+.wd-ledger-val {
+  display: block;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: #1A3626;
+  margin-bottom: 10px;
+}
+.wd-ledger-lbl {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  color: rgba(26, 54, 38, 0.7);
+}
+
+/* ── VINTAGE MENU CATALOGUE ── */
+.wd-catalogue {
+  margin-bottom: 120px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wd-section-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 60px;
+  color: #1A3626;
+}
+.wd-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.wd-menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wd-menu-header {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+.wd-menu-num {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #C5A059;
+}
+.wd-menu-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1A3626;
+  white-space: nowrap;
+}
+.wd-menu-dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted rgba(26, 54, 38, 0.3);
+  position: relative;
+  top: -6px;
+}
+.wd-menu-price {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: #1A3626;
+}
+.wd-menu-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(26, 54, 38, 0.8);
+  padding-left: 35px; /* Aligns with text past the roman numeral */
+}
+
+.wd-menu-cta-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+.wd-btn-gold {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #1A3626;
+  text-decoration: none;
+  border: 1px solid #1A3626;
+  padding: 15px 40px;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+.wd-btn-gold:hover {
+  background: #1A3626;
+  color: #F9F8F6;
+  border-color: #1A3626;
+}
+
+/* ── THE MANIFESTO ── */
+.wd-manifesto {
+  text-align: center;
+  padding: 80px 20px;
+  background: #1A3626; 
+  color: #F9F8F6; 
+  margin: 0 -4vw; /* Break out of inner frame */
+  margin-bottom: 100px;
+  border-top: 1px solid #C5A059;
+  border-bottom: 1px solid #C5A059;
+}
+.wd-man-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.wd-man-quote {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #C5A059;
+}
+.wd-man-author {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  display: block;
+  color: rgba(249, 248, 246, 0.8);
+}
+
+/* ── FOOTER ── */
+.wd-footer {
+  text-align: center;
+}
+.wd-footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(26, 54, 38, 0.3);
+  margin: 0 auto 40px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wd-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+}
+.wd-footer-copy {
+  color: rgba(26, 54, 38, 0.7);
+}
+.wd-footer-links {
+  display: flex;
+  gap: 20px;
+}
+.wd-footer-links a {
+  color: #1A3626;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.wd-footer-links a:hover {
+  color: #C5A059;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .wd-top-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-bottom: none;
+  }
+  .wd-hero-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .wd-dot { display: none; }
+  .wd-ledger-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .wd-ledger-col {
+    border-right: none;
+    border-bottom: 1px dotted rgba(26, 54, 38, 0.3);
+    padding-bottom: 40px;
+  }
+  .wd-ledger-col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .wd-menu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .wd-menu-dots { display: none; }
+  .wd-menu-desc { padding-left: 0; }
+  .wd-footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,398 @@
+/* ── DATA ANALYTICS: RETRO Y2K OS ── */
+
+.retro-desktop {
+  background-color: #008080; /* Classic Win95 Teal */
+  color: #000;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Close to system fonts */
+  overflow: hidden; /* Hide scrollbars for true desktop feel */
+  position: relative;
+}
+
+/* ── ICONS ── */
+.retro-icons {
+  position: absolute;
+  top: 120px; /* Below navbar */
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 10;
+}
+.retro-icon-btn {
+  background: transparent;
+  border: 1px dotted transparent;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  width: 80px;
+  padding: 5px;
+  text-decoration: none;
+}
+.retro-icon-btn:hover, .retro-icon-btn:focus {
+  background: rgba(0, 0, 128, 0.5);
+  border: 1px dotted #fff;
+}
+.retro-icon-img {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+.retro-icon-btn span {
+  font-size: 0.85rem;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* ── WORKSPACE (WINDOWS) ── */
+.retro-workspace {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Let clicks pass through to icons */
+}
+
+/* Base Window Style */
+.retro-window {
+  position: absolute;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 3px;
+  pointer-events: auto;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+}
+.retro-title-bar {
+  background: #000080;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+.retro-close-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 0 4px;
+  cursor: pointer;
+}
+.retro-close-btn:active {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.retro-window-body {
+  padding: 10px;
+}
+.retro-menu-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 5px;
+  font-size: 0.9rem;
+}
+.retro-menu-bar span:first-letter {
+  text-decoration: underline;
+}
+.retro-content {
+  background: #fff;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 15px;
+  min-height: 100px;
+}
+
+/* Specific Windows */
+.profile-win {
+  top: 15%;
+  left: 15%;
+  width: 600px;
+  z-index: 20;
+}
+.projects-win {
+  z-index: 23;
+}
+.terminal-win {
+  z-index: 24;
+}
+.retro-project-list {
+  padding-left: 20px;
+}
+.retro-project-list li {
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 1px dashed #808080;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.retro-project-list p {
+  color: #333;
+}
+.retro-cursor {
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.flex-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.retro-portrait {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #000;
+  filter: contrast(1.2) grayscale(0.5); /* Retro look */
+}
+.retro-h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.retro-h2 {
+  font-size: 0.9rem;
+  color: #000080;
+  margin-bottom: 15px;
+}
+.retro-text p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.stats-win {
+  top: 40%;
+  left: 45%;
+  width: 400px;
+  z-index: 21;
+}
+.retro-stat-box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #c0c0c0;
+  padding: 8px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+.retro-stat-val {
+  font-weight: bold;
+  color: #000080;
+}
+.retro-chart {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #000;
+  padding: 10px;
+  border: 2px inset #fff;
+}
+.retro-bar {
+  height: 15px;
+  background: #00FF00; /* Hacker green */
+}
+
+.skills-win {
+  top: 25%;
+  right: 10%;
+  width: 350px;
+  z-index: 22;
+}
+.retro-tabs {
+  display: flex;
+  gap: 2px;
+}
+.retro-tab {
+  padding: 4px 10px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 0;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.retro-tab.active {
+  background: #c0c0c0;
+  margin-top: 0;
+  padding-bottom: 6px;
+  z-index: 2;
+  position: relative;
+}
+.retro-tab-content {
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 15px;
+  margin-top: -2px;
+  position: relative;
+  z-index: 1;
+}
+.retro-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+.retro-list li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.retro-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.retro-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 4px 15px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.retro-btn:active {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.retro-btn.disabled {
+  color: #808080;
+  text-shadow: 1px 1px 0 #fff;
+  cursor: not-allowed;
+}
+
+/* ── TASKBAR ── */
+.retro-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 40px;
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  z-index: 100;
+}
+.retro-start-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.retro-start-btn:active {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.retro-start-logo {
+  width: 16px;
+  height: 16px;
+}
+.retro-task-tabs {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+.retro-task-tab {
+  background: #c0c0c0;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 4px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  min-width: 120px;
+  white-space: nowrap;
+}
+.retro-task-tab.active {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: #dfdfdf;
+}
+.retro-time {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width: 900px) {
+  .retro-desktop {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .retro-workspace {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 100px 0 60px 0; /* Space for taskbar and navbar */
+  }
+  .retro-window {
+    position: relative;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 95% !important;
+    z-index: 10 !important;
+  }
+  .profile-win, .stats-win, .skills-win, .projects-win, .terminal-win {
+    width: 90vw !important;
+  }
+  .retro-icons {
+    display: none; /* Hide desktop icons on mobile to save space */
+  }
+  .flex-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .retro-task-tabs {
+    display: none; /* Hide task tabs on mobile */
+  }
+}

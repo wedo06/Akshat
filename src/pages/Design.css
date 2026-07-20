@@ -1,0 +1,276 @@
+/* ── DESIGN PAGE EXTENDED THEME ── */
+
+.ds-extended-page {
+  background: #0f0f11; /* Dark background for the graphic design showcase */
+  color: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 120px;
+}
+
+/* ── 1. HERO POSTER (Matches exact reference) ── */
+.ds-hero {
+  background: #A67CFC;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px; /* Prevent navbar overlap while keeping background purple */
+}
+
+/* This canvas fills the entire screen for an immersive hero layout */
+.ds-poster-canvas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* SVG layer guarantees perfect math/coordinate alignment */
+.ds-poster-svg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* SVG Interactive Button */
+.ds-svg-btn circle {
+  transition: r 0.3s ease;
+}
+.ds-svg-btn:hover circle {
+  r: 60; /* Grow on hover */
+}
+
+/* ── 2. PHILOSOPHY / EDITORIAL ── */
+.ds-philosophy {
+  padding: 150px 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ds-phil-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.ds-phil-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.ds-italic {
+  font-style: italic;
+  color: #A67CFC;
+}
+.ds-phil-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #a1a1aa;
+  margin-bottom: 20px;
+}
+
+/* ── 3. ASYMMETRICAL DESIGN GALLERY ── */
+.ds-gallery {
+  padding: 50px 5vw 150px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ds-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 350px;
+  gap: 30px;
+}
+.ds-gal-item {
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* Glassmorphism item */
+.ds-gal-glass {
+  background: #1a1a1f;
+}
+.ds-glass-panel {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  z-index: 2;
+}
+.ds-glass-circle {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: #F34C7A;
+  border-radius: 50%;
+  z-index: -1;
+}
+.ds-glass-panel h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.ds-glass-panel p { color: #a1a1aa; font-size: 0.9rem; }
+
+/* Brutalist item */
+.ds-gal-brutal {
+  background: #FFCE75;
+  color: #0f0f11;
+  flex-direction: column;
+  text-align: center;
+}
+.ds-brutal-huge {
+  font-family: 'Inter', sans-serif;
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.ds-brutal-sub {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-top: 10px;
+}
+
+/* Mesh item */
+.ds-gal-mesh {
+  background: #111;
+  grid-row: span 2; /* Make this item taller */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-mesh-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+.ds-mesh-1 {
+  width: 300px; height: 300px;
+  background: #A67CFC;
+  top: 10%; left: 10%;
+  animation: float 10s infinite alternate;
+}
+.ds-mesh-2 {
+  width: 250px; height: 250px;
+  background: #3A1C96;
+  bottom: 10%; right: 10%;
+  animation: float 8s infinite alternate-reverse;
+}
+.ds-mesh-text {
+  position: relative;
+  z-index: 10;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  mix-blend-mode: overlay;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(30px, 30px); }
+}
+
+/* Wireframe item */
+.ds-gal-wire {
+  background: #1a1a1f;
+  flex-direction: column;
+  gap: 20px;
+}
+.ds-wire-box {
+  width: 60%;
+  height: 60px;
+  border: 2px dashed #555;
+  border-radius: 8px;
+}
+.ds-wire-box.ds-filled {
+  border: none;
+  background: #A67CFC;
+}
+.ds-wire-text {
+  color: #a1a1aa;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+/* ── 4. TOOLS ── */
+.ds-tools {
+  padding: 0 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ds-tools-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #555;
+  margin-bottom: 40px;
+}
+.ds-tools-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.ds-tool-badge {
+  padding: 15px 30px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 40px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: rgba(255,255,255,0.02);
+  transition: all 0.3s ease;
+}
+.ds-tool-badge:hover {
+  background: #A67CFC;
+  border-color: #A67CFC;
+  transform: translateY(-5px);
+}
+
+/* ── SCROLL REVEAL ── */
+.ds-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ds-reveal.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width: 768px) {
+  .ds-phil-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .ds-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .ds-gal-mesh {
+    grid-row: auto;
+  }
+}
