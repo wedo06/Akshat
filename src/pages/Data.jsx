@@ -149,6 +149,9 @@ export default function Data() {
                 <p>
                   <b>Experience:</b> Founder @ WeDo | Software Developer @ Countrees AI.
                 </p>
+                <p style={{marginTop: '10px'}}>
+                  <b>External Portfolio:</b> <a href="https://akshuu1.github.io/analysisPortfolio/" target="_blank" rel="noopener">View Here ↗</a>
+                </p>
               </div>
             </div>
           </DraggableWindow>
@@ -171,11 +174,11 @@ export default function Data() {
             <div className="retro-content">
               <ul className="retro-list retro-project-list">
                 <li>
-                  <b>Staywise (Airbnb Data Analysis)</b>
+                  <b><a href="https://public.tableau.com/app/profile/akshat.agrawal2260/viz/Airbnb_17773079392460/MarketIntelligence?publish=yes" target="_blank" rel="noopener" style={{color: '#000080', textDecoration: 'underline'}}>Staywise (Airbnb Data Analysis) ↗</a></b>
                   <p>Analyzed Airbnb listings to understand market trends and revenue distribution. Identified pricing inefficiencies using gap analysis and proposed data-driven optimizations.</p>
                 </li>
                 <li>
-                  <b>EV Charging Analytical</b>
+                  <b><a href="https://public.tableau.com/app/profile/akshat.agrawal2260/viz/EVchargingAnalyticalDashboard/Dashboard1" target="_blank" rel="noopener" style={{color: '#000080', textDecoration: 'underline'}}>EV Charging Analytical ↗</a></b>
                   <p>Tracks EV charging performance by highlighting energy consumption, revenue, and usage time across cities. Enables data-driven decisions for scaling networks.</p>
                 </li>
               </ul>
@@ -262,20 +265,19 @@ export default function Data() {
               {activeTab === 'databases' && (
                 <ul className="retro-list">
                   <li><input type="checkbox" readOnly checked /> MongoDB</li>
-                  <li><input type="checkbox" readOnly checked /> MySQL / SQL</li>
+                  <li><input type="checkbox" readOnly checked /> MySQL</li>
                 </ul>
               )}
               {activeTab === 'tools' && (
                 <ul className="retro-list">
                   <li><input type="checkbox" readOnly checked /> Tableau</li>
-                  <li><input type="checkbox" readOnly checked /> Excel / Spreadsheets</li>
+                  <li><input type="checkbox" readOnly checked /> PowerBI</li>
                 </ul>
               )}
               {activeTab === 'cloud' && (
                 <ul className="retro-list">
-                  <li><input type="checkbox" readOnly checked /> Python (Pandas)</li>
-                  <li><input type="checkbox" readOnly checked /> JavaScript (Node.js)</li>
-                  <li><input type="checkbox" readOnly checked /> HTML / CSS</li>
+                  <li><input type="checkbox" readOnly checked /> Excel</li>
+                  <li><input type="checkbox" readOnly checked /> Spreadsheets</li>
                 </ul>
               )}
               

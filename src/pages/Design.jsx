@@ -136,10 +136,8 @@ export default function Design() {
         <h2 className="ds-tools-title">My Toolkit</h2>
         <div className="ds-tools-flex">
           <div className="ds-tool-badge">Figma</div>
-          <div className="ds-tool-badge">Spline 3D</div>
           <div className="ds-tool-badge">Framer</div>
-          <div className="ds-tool-badge">Adobe CC</div>
-          <div className="ds-tool-badge">Webflow</div>
+          <div className="ds-tool-badge">Canva</div>
         </div>
       </section>
 

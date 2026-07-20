@@ -43,6 +43,9 @@ export default function Navbar() {
                 {l.label}
               </NavLink>
             ))}
+            <a href="/Akshat_Agrawal_Resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-link" style={{display: 'flex', alignItems: 'center', gap: '4px', opacity: 0.8}}>
+              Resume <span style={{fontSize: '0.8rem'}}>↓</span>
+            </a>
           </div>
 
           <div className="nav-right">
@@ -63,7 +66,10 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
-          <NavLink to="/contact" className="mob-cta" style={{ animationDelay: `${links.length * 0.1}s` }}>
+          <a href="/Akshat_Agrawal_Resume.pdf" target="_blank" rel="noopener noreferrer" style={{ animationDelay: `${links.length * 0.1}s`, fontSize: '1.2rem', color: '#888' }}>
+            Download Resume ↓
+          </a>
+          <NavLink to="/contact" className="mob-cta" style={{ animationDelay: `${(links.length + 1) * 0.1}s` }}>
             Let's Connect
           </NavLink>
         </div>

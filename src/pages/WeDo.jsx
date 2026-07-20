@@ -27,10 +27,7 @@ export default function WeDo() {
       <div className="wd-frame-outer">
         <div className="wd-frame-inner">
           
-          {/* ── WAX SEAL MONOGRAM ── */}
-          <div className="wd-monogram-wrapper wd-reveal">
-            <div className="wd-monogram">WD</div>
-          </div>
+
 
           {/* ── HERO: THE TITLE PAGE ── */}
           <section className="wd-hero wd-reveal">
@@ -41,6 +38,9 @@ export default function WeDo() {
             </div>
 
             <div className="wd-title-wrapper">
+              <a href="https://teamwedo.vercel.app/" target="_blank" rel="noopener" style={{textDecoration: 'none', color: 'inherit'}}>
+                <img src="/wedo_logo.png" alt="WeDo Logo" style={{width: '140px', margin: '0 auto 40px', display: 'block'}} />
+              </a>
               <h1 className="wd-title">
                 <span className="wd-title-script">The</span>
                 <br />
@@ -80,45 +80,64 @@ export default function WeDo() {
             </div>
           </section>
 
-          {/* ── SERVICES MENU (Vintage Menu Style) ── */}
-          <section className="wd-catalogue wd-reveal">
-            <h2 className="wd-section-title">Catalogue of Services</h2>
+          {/* ── THE FOUR DISCIPLINES ── */}
+          <section className="wd-disciplines wd-reveal">
+            <h2 className="wd-section-title">What we Provide</h2>
             
-            <div className="wd-menu-list">
-              {[
-                { 
-                  num: 'I.', 
-                  title: 'Bespoke Software Engineering', 
-                  desc: 'Meticulously crafted web applications, architected from foundation to pinnacle.',
-                  price: 'Inquire'
-                },
-                { 
-                  num: 'II.', 
-                  title: 'Executive Data Intelligence', 
-                  desc: 'Transforming raw information into actionable foresight with custom pipelines.',
-                  price: 'Inquire'
-                },
-                { 
-                  num: 'III.', 
-                  title: 'Brand Legacy & Typography', 
-                  desc: 'Establishing legacies through bespoke UI/UX systems and visual languages.',
-                  price: 'Inquire'
-                },
-              ].map(s => (
-                <div key={s.num} className="wd-menu-item wd-reveal">
-                  <div className="wd-menu-header">
-                    <span className="wd-menu-num">{s.num}</span>
-                    <h3 className="wd-menu-title">{s.title}</h3>
-                    <div className="wd-menu-dots"></div>
-                    <span className="wd-menu-price">{s.price}</span>
-                  </div>
-                  <p className="wd-menu-desc">{s.desc}</p>
+            <div className="wd-disc-grid">
+              
+              {/* Discipline I */}
+              <div className="wd-disc-card wd-reveal">
+                <div className="wd-disc-header">
+                  <span className="wd-disc-num">I.</span>
+                  <span className="wd-disc-meta">Web Build</span>
                 </div>
-              ))}
-            </div>
+                <h3 className="wd-disc-title">Website Design <br/>& Development</h3>
+                <p className="wd-disc-desc">Beautiful, responsive, scalable — built with modern stacks for performance and reliability.</p>
+                <div className="wd-disc-tags">
+                  <span>Design</span><span>Build</span><span>Next</span>
+                </div>
+              </div>
 
-            <div className="wd-menu-cta-wrapper">
-              <Link to="/contact" className="wd-btn-gold">Commission Our Services</Link>
+              {/* Discipline II */}
+              <div className="wd-disc-card wd-reveal" style={{transitionDelay: '0.1s'}}>
+                <div className="wd-disc-header">
+                  <span className="wd-disc-num">II.</span>
+                  <span className="wd-disc-meta">Brand</span>
+                </div>
+                <h3 className="wd-disc-title">Branding <br/>& Identity</h3>
+                <p className="wd-disc-desc">Logos, colour, typography and visual systems that make brands instantly recognisable.</p>
+                <div className="wd-disc-tags">
+                  <span>Identity</span><span>Type</span><span>System</span>
+                </div>
+              </div>
+
+              {/* Discipline III */}
+              <div className="wd-disc-card wd-reveal" style={{transitionDelay: '0.2s'}}>
+                <div className="wd-disc-header">
+                  <span className="wd-disc-num">III.</span>
+                  <span className="wd-disc-meta">AI + Ops</span>
+                </div>
+                <h3 className="wd-disc-title">AI Solutions <br/>& Automation</h3>
+                <p className="wd-disc-desc">Chatbots, workflow automation and intelligent systems that quietly retire manual work.</p>
+                <div className="wd-disc-tags">
+                  <span>Automate</span><span>Scale</span><span>AI</span>
+                </div>
+              </div>
+
+              {/* Discipline IV */}
+              <div className="wd-disc-card wd-reveal" style={{transitionDelay: '0.3s'}}>
+                <div className="wd-disc-header">
+                  <span className="wd-disc-num">IV.</span>
+                  <span className="wd-disc-meta">UX + Growth</span>
+                </div>
+                <h3 className="wd-disc-title">UI/UX & <br/>Digital Growth</h3>
+                <p className="wd-disc-desc">Interfaces people enjoy — with SEO, analytics and optimisation that keep growing.</p>
+                <div className="wd-disc-tags">
+                  <span>SEO</span><span>Analytics</span><span>Optimize</span>
+                </div>
+              </div>
+
             </div>
           </section>
 
@@ -141,9 +160,9 @@ export default function WeDo() {
             <div className="wd-footer-content">
               <span className="wd-footer-copy">© MMXXV The WeDo Agency.</span>
               <div className="wd-footer-links">
-                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-                <a href="mailto:akshat@email.com">Correspondence</a>
+                <a href="https://www.linkedin.com/in/akshat-agrawal-955347316/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Akshuu1" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:akshata.14feb@gmail.com">Correspondence</a>
               </div>
             </div>
           </footer>

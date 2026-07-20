@@ -151,9 +151,9 @@ export default function About() {
         <p>© 2025 Akshat Agrawal — Built with obsession.</p>
         <Link to="/wedo" className="footer-wedo-link">WeDo Agency ↗</Link>
         <div className="footer-soc">
-          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-          <a href="mailto:akshat@email.com">Email</a>
+          <a href="https://www.linkedin.com/in/akshat-agrawal-955347316/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/Akshuu1" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:akshata.14feb@gmail.com">Email</a>
         </div>
       </footer>
     </div>

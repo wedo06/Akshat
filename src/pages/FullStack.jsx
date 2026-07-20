@@ -23,19 +23,22 @@ const projects = [
     title: 'WeDo Agency',
     desc: 'Founded and designed the WeDo agency website. Showcases services, portfolio, and brand identity. Focused on performance, aesthetics, and conversions.',
     stack: ['React', 'Next.js', 'Framer Motion'],
-    year: '2026'
+    year: '2026',
+    link: 'https://teamwedo.vercel.app/'
   },
   {
     title: 'Margify',
     desc: 'Multimodal travel planning system integrating Google Places API and interactive maps for intelligent route visualization.',
     stack: ['React', 'Express', 'MongoDB', 'GSAP'],
-    year: '2025'
+    year: '2025',
+    link: 'https://margify-ten.vercel.app/'
   },
   {
     title: 'Stylee',
     desc: 'Full-stack fashion platform with animated frontend and MongoDB backend. Features role-based auth and CRUD operations.',
     stack: ['React', 'Node.js', 'Tailwind', 'Framer Motion'],
-    year: '2025'
+    year: '2025',
+    link: 'https://stylee-gamma.vercel.app/'
   },
 ]
 
@@ -107,7 +110,7 @@ export default function FullStack() {
               <div className="fs-pr-stack">
                 {p.stack.map(s => <span key={s}>{s}</span>)}
               </div>
-              <div className="fs-pr-arrow">↗</div>
+              <a href={p.link} target="_blank" rel="noopener noreferrer" className="fs-pr-arrow">↗</a>
             </div>
           ))}
         </div>
@@ -117,20 +120,20 @@ export default function FullStack() {
       <section className="fs-skills-section fs-reveal">
         <div className="fs-skills-grid">
           <div className="fs-skill-cell">
-            <h3>CORE</h3>
-            <p>JavaScript<br/>Python<br/>Next.js<br/>Firebase</p>
-          </div>
-          <div className="fs-skill-cell">
             <h3>FRONTEND</h3>
-            <p>React<br/>Tailwind CSS<br/>Framer Motion<br/>GSAP</p>
+            <p>React<br/>JavaScript<br/>Tailwind CSS<br/>Framer Motion<br/>HTML / CSS</p>
           </div>
           <div className="fs-skill-cell">
             <h3>BACKEND</h3>
-            <p>Node.js<br/>Express.js<br/>REST APIs</p>
+            <p>Node.js<br/>Express JS<br/>Prisma ORM</p>
           </div>
           <div className="fs-skill-cell">
-            <h3>DATA & DB</h3>
-            <p>MongoDB<br/>SQL / MySQL<br/>Prisma ORM</p>
+            <h3>DATA & LOGIC</h3>
+            <p>Python<br/>Pandas<br/>SQL</p>
+          </div>
+          <div className="fs-skill-cell">
+            <h3>ARCHITECTURE</h3>
+            <p>System Design</p>
           </div>
         </div>
       </section>
@@ -142,8 +145,8 @@ export default function FullStack() {
           <p>© 2025 ALL RIGHTS RESERVED.</p>
         </div>
         <div className="fs-footer-col fs-right">
-          <a href="https://github.com">GITHUB</a>
-          <a href="https://linkedin.com">LINKEDIN</a>
+          <a href="https://github.com/Akshuu1" target="_blank" rel="noopener">GITHUB</a>
+          <a href="https://www.linkedin.com/in/akshat-agrawal-955347316/" target="_blank" rel="noopener">LINKEDIN</a>
           <Link to="/contact">CONTACT</Link>
         </div>
       </footer>
