@@ -72,10 +72,10 @@ const DraggableWindow = ({ title, id, defaultPos, onClose, children, isActive, b
 export default function Data() {
   const [openWindows, setOpenWindows] = useState({
     profile: true,
-    stats: false,
-    skills: false,
+    stats: true,
+    skills: true,
     projects: true,
-    terminal: false
+    terminal: true
   })
   
   const [activeWindow, setActiveWindow] = useState('profile')
