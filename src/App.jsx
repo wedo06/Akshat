@@ -11,6 +11,7 @@ const Data = lazy(() => import('./pages/Data'))
 const Design = lazy(() => import('./pages/Design'))
 const WeDo = lazy(() => import('./pages/WeDo'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Resume = lazy(() => import('./pages/Resume'))
 
 function ScrollTop() {
   const { pathname } = useLocation()
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/design" element={<Design />} />
           <Route path="/wedo" element={<WeDo />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

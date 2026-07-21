@@ -27,9 +27,11 @@ export default function Home() {
       {/* ── RED BINARY ART HERO ── */}
       <section className="ht-hero">
 
-        {/* The user's 101010 Binary Art image */}
-        <div className="ht-binary-art">
-          <img src="/binary_art_nobg.webp" alt="Akshat Agrawal 1010 Binary Art Portrait" fetchPriority="high" decoding="async" width="500" height="500" />
+        {/* The user's 101010 Binary Art image - Exactly matched to Design page size */}
+        <div className="ht-binary-art" style={{ position: 'absolute', inset: 0, zIndex: 3, pointerEvents: 'none' }}>
+          <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" style={{ width: '100%', height: '100%' }}>
+            <image href="/binary_art_nobg.webp" x="370" y="200" width="700" height="1000" preserveAspectRatio="xMidYMax meet" />
+          </svg>
         </div>
 
         {/* Insane Typography Overlays */}
@@ -101,45 +103,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SELECTED WORKS (PROJECTS) ── */}
-      <section className="ht-projects-section reveal">
-        <h2 className="ht-sec-h" style={{ marginBottom: '40px' }}>FEATURED WORKS</h2>
-        <div className="ht-proj-list">
-          <a href="https://teamwedo.vercel.app/" target="_blank" rel="noopener" className="ht-proj-item">
-            <div className="ht-proj-info">
-              <h3>The WeDo Agency</h3>
-              <p>Full-Stack / Agency Platform</p>
-            </div>
-            <div className="ht-proj-arrow">↗</div>
-          </a>
-          <a href="https://margify-ten.vercel.app/" target="_blank" rel="noopener" className="ht-proj-item">
-            <div className="ht-proj-info">
-              <h3>Margify</h3>
-              <p>Full-Stack / Travel Intelligence</p>
-            </div>
-            <div className="ht-proj-arrow">↗</div>
-          </a>
-          <a href="https://stylee-gamma.vercel.app/" target="_blank" rel="noopener" className="ht-proj-item">
-            <div className="ht-proj-info">
-              <h3>Stylee</h3>
-              <p>Full-Stack / Fashion E-Commerce</p>
-            </div>
-            <div className="ht-proj-arrow">↗</div>
-          </a>
-          <a href="https://public.tableau.com/app/profile/akshat.agrawal2260/viz/Airbnb_17773079392460/MarketIntelligence?publish=yes" target="_blank" rel="noopener" className="ht-proj-item">
-            <div className="ht-proj-info">
-              <h3>Staywise</h3>
-              <p>Data / Airbnb Gap Analysis</p>
-            </div>
-            <div className="ht-proj-arrow">↗</div>
-          </a>
-          <a href="https://public.tableau.com/app/profile/akshat.agrawal2260/viz/EVchargingAnalyticalDashboard/Dashboard1" target="_blank" rel="noopener" className="ht-proj-item">
-            <div className="ht-proj-info">
-              <h3>EV Charging</h3>
-              <p>Data / Analytical Dashboard</p>
-            </div>
-            <div className="ht-proj-arrow">↗</div>
-          </a>
+      {/* ── EXPERTISE SECTION ── */}
+      <section className="ht-expertise-section reveal">
+        <h2 className="ht-sec-h" style={{ marginBottom: '40px' }}>EXPERTISE</h2>
+        <div className="ht-expertise-list">
+          <div className="ht-exp-item">
+            <span className="ht-exp-num">01</span>
+            <h3 className="ht-exp-title">FULL-STACK ENGINEERING</h3>
+            <p className="ht-exp-desc">React, Node.js, Express, Python</p>
+          </div>
+          <div className="ht-exp-item">
+            <span className="ht-exp-num">02</span>
+            <h3 className="ht-exp-title">DATA INTELLIGENCE</h3>
+            <p className="ht-exp-desc">Tableau, PowerBI, SQL, Pandas</p>
+          </div>
+          <div className="ht-exp-item">
+            <span className="ht-exp-num">03</span>
+            <h3 className="ht-exp-title">BRAND & UI/UX DESIGN</h3>
+            <p className="ht-exp-desc">Figma, Framer, Visual Identity</p>
+          </div>
         </div>
       </section>
 

@@ -47,7 +47,7 @@ export default function FullStack() {
   useReveal()
 
   return (
-    <div className="page fullstack-page-dark">
+    <div className="page fs-brutal-page">
       <SEO 
         title="Full-Stack Engineer" 
         description="Explore full-stack web applications and software engineering projects by Akshat Agrawal. Built with React, Next.js, Node.js, Express, Python, and SQL."
@@ -106,7 +106,7 @@ export default function FullStack() {
         
         <div className="fs-project-list">
           {projects.map((p, i) => (
-            <div key={i} className="fs-project-row fs-reveal" style={{ transitionDelay: `${i * 0.1}s` }}>
+            <a key={i} href={p.link} target="_blank" rel="noopener noreferrer" className="fs-project-row fs-reveal" style={{ transitionDelay: `${i * 0.1}s`, textDecoration: 'none', color: 'inherit' }}>
               <div className="fs-pr-year">{p.year}</div>
               <div className="fs-pr-info">
                 <h3>{p.title}</h3>
@@ -115,8 +115,8 @@ export default function FullStack() {
               <div className="fs-pr-stack">
                 {p.stack.map(s => <span key={s}>{s}</span>)}
               </div>
-              <a href={p.link} target="_blank" rel="noopener noreferrer" className="fs-pr-arrow">↗</a>
-            </div>
+              <div className="fs-pr-arrow">↗</div>
+            </a>
           ))}
         </div>
       </section>

@@ -44,7 +44,7 @@ export default function WeDo() {
 
             <div className="wd-title-wrapper">
               <a href="https://teamwedo.vercel.app/" target="_blank" rel="noopener" style={{textDecoration: 'none', color: 'inherit'}}>
-                <img src="/wedo_logo.webp" alt="WeDo Agency Logo" loading="lazy" decoding="async" style={{width: '140px', margin: '0 auto 40px', display: 'block'}} width="140" height="40" />
+                <img src="/wedo_logo.webp" alt="WeDo Agency Logo" loading="lazy" decoding="async" style={{width: '140px', margin: '0 auto 40px', display: 'block', height: 'auto'}} width="140" />
               </a>
               <h1 className="wd-title">
                 <span className="wd-title-script">The</span>
