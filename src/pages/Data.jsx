@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Data.css'
 
 const DraggableWindow = ({ title, id, defaultPos, onClose, children, isActive, bringToFront, width = 'auto' }) => {
@@ -94,6 +95,10 @@ export default function Data() {
   // We need safe initial positions based on a typical desktop viewport, so they don't pile up.
   return (
     <div className="page retro-desktop">
+      <SEO 
+        title="Data Analyst Portfolio" 
+        description="Data intelligence & analytics portfolio of Akshat Agrawal. Featuring Tableau dashboards, SQL queries, Excel, PowerBI, and data pipelines."
+      />
       
       {/* ── DESKTOP ICONS ── */}
       <div className="retro-icons">
@@ -139,7 +144,7 @@ export default function Data() {
               <span>File</span><span>Edit</span><span>View</span><span>Help</span>
             </div>
             <div className="retro-content flex-content">
-              <img src="/binary_art_nobg.png" alt="Akshat" className="retro-portrait" draggable="false" />
+              <img src="/binary_art_nobg.webp" alt="Akshat" className="retro-portrait" draggable="false" />
               <div className="retro-text">
                 <h1 className="retro-h1">Akshat Agrawal</h1>
                 <h2 className="retro-h2">DATA ANALYST // ENGINEER</h2>
@@ -294,7 +299,7 @@ export default function Data() {
       {/* ── TASKBAR ── */}
       <div className="retro-taskbar">
         <button className="retro-start-btn">
-          <img src="/apple-touch-icon.png" alt="logo" className="retro-start-logo" onError={(e) => e.target.style.display='none'}/>
+          <img src="/apple-touch-icon.webp" alt="logo" className="retro-start-logo" onError={(e) => e.target.style.display='none'}/>
           Start
         </button>
         <div className="retro-task-tabs" style={{overflowX: 'auto'}}>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './About.css'
 
 function useReveal() {
@@ -18,6 +19,10 @@ export default function About() {
 
   return (
     <div className="page about-page-split">
+      <SEO 
+        title="About Me" 
+        description="Learn more about Akshat Agrawal — Founder of WeDo Agency, Full-Stack Engineer & Data Analyst. Experience, skills, and background."
+      />
 
       <section className="split-hero">
         
@@ -53,12 +58,12 @@ export default function About() {
         <div className="split-image-container">
           {/* Left Art Image */}
           <div className="img-half img-left">
-            <img src="/binary_art_nobg.png" alt="Designer Art" />
+            <img src="/binary_art_nobg.webp" alt="Designer Art" />
           </div>
           
           {/* Right Normal Image (Using same image but grayscale and desaturated to mimic clean code side) */}
           <div className="img-half img-right">
-            <img src="/binary_art_nobg.png" alt="Coder Photo" style={{ filter: 'grayscale(1) brightness(1.2)' }} />
+            <img src="/binary_art_nobg.webp" alt="Coder Photo" style={{ filter: 'grayscale(1) brightness(1.2)' }} />
           </div>
         </div>
 
@@ -94,7 +99,7 @@ export default function About() {
         {/* Profile Card */}
         <div className="ab-bento-card ab-card-profile" style={{ transitionDelay: '0s' }}>
           <div className="ab-profile-img">
-            <img src="/binary_art_nobg.png" alt="Akshat" />
+            <img src="/binary_art_nobg.webp" alt="Akshat Agrawal" loading="lazy" decoding="async" width="120" height="120" />
           </div>
           <div className="ab-profile-info">
             <h2>Akshat Agrawal</h2>

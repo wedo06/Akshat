@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Home.css'
 
 function useReveal() {
@@ -18,13 +19,17 @@ export default function Home() {
 
   return (
     <div className="page home-page-trending">
+      <SEO 
+        title="Home" 
+        description="Official portfolio of Akshat Agrawal — Full-Stack Engineer, Data Analyst, and Founder of WeDo Agency."
+      />
 
       {/* ── RED BINARY ART HERO ── */}
       <section className="ht-hero">
 
         {/* The user's 101010 Binary Art image */}
         <div className="ht-binary-art">
-          <img src="/binary_art_nobg.png" alt="Akshat " />
+          <img src="/binary_art_nobg.webp" alt="Akshat Agrawal 1010 Binary Art Portrait" fetchPriority="high" decoding="async" width="500" height="500" />
         </div>
 
         {/* Insane Typography Overlays */}

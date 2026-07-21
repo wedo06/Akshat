@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './Design.css'
 
 export default function Design() {
@@ -20,6 +21,10 @@ export default function Design() {
 
   return (
     <div className="page ds-extended-page">
+      <SEO 
+        title="UI/UX & Brand Design" 
+        description="Design portfolio of Akshat Agrawal — Founder of WeDo Agency. Crafting high-converting digital products, brand identities, Figma systems, and Framer prototypes."
+      />
       
       {/* ── 1. HERO POSTER ── */}
       <section className="ds-hero">
@@ -32,7 +37,7 @@ export default function Design() {
             <path d="M 370,1200 L 370,550 A 350,350 0 0,1 1070,550 L 1070,1200 Z" fill="#FFCE75" />
             
             {/* 2. PORTRAIT IMAGE */}
-            <image href="/binary_art_nobg.png" x="370" y="200" width="700" height="1000" preserveAspectRatio="xMidYMax meet" />
+            <image href="/binary_art_nobg.webp" x="370" y="200" width="700" height="1000" preserveAspectRatio="xMidYMax meet" />
             
             {/* 3. DESIGNER CURVED TEXT */}
             <path id="designerCurve" d="M 330,1200 L 330,550 A 390,390 0 0,1 720,160" fill="transparent" />

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './WeDo.css'
 
 function useReveal() {
@@ -22,6 +23,10 @@ export default function WeDo() {
 
   return (
     <div className="page wedo-page">
+      <SEO 
+        title="WeDo Agency" 
+        description="The WeDo Agency — Purveyors of Fine Digital Architectures. Website Design & Development, Branding & Identity, AI Solutions, and UI/UX Digital Growth."
+      />
       
       {/* ── DOUBLE BORDER FRAMING ── */}
       <div className="wd-frame-outer">
@@ -39,7 +44,7 @@ export default function WeDo() {
 
             <div className="wd-title-wrapper">
               <a href="https://teamwedo.vercel.app/" target="_blank" rel="noopener" style={{textDecoration: 'none', color: 'inherit'}}>
-                <img src="/wedo_logo.png" alt="WeDo Logo" style={{width: '140px', margin: '0 auto 40px', display: 'block'}} />
+                <img src="/wedo_logo.webp" alt="WeDo Agency Logo" loading="lazy" decoding="async" style={{width: '140px', margin: '0 auto 40px', display: 'block'}} width="140" height="40" />
               </a>
               <h1 className="wd-title">
                 <span className="wd-title-script">The</span>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import SEO from '../components/SEO'
 import './Contact.css'
 
 export default function Contact() {
@@ -31,6 +32,10 @@ export default function Contact() {
 
   return (
     <div className="page contact-term2-page">
+      <SEO 
+        title="Contact" 
+        description="Get in touch with Akshat Agrawal — Founder of WeDo Agency, Full-Stack Developer & Data Analyst. Email akshata.14feb@gmail.com."
+      />
       <div className="term2-window">
         {/* Terminal Header */}
         <div className="term2-header">

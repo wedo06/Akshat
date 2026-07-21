@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import './FullStack.css'
 
 function useReveal() {
@@ -46,7 +47,11 @@ export default function FullStack() {
   useReveal()
 
   return (
-    <div className="page fs-brutal-page">
+    <div className="page fullstack-page-dark">
+      <SEO 
+        title="Full-Stack Engineer" 
+        description="Explore full-stack web applications and software engineering projects by Akshat Agrawal. Built with React, Next.js, Node.js, Express, Python, and SQL."
+      />
       
       {/* ── HERO SECTION ── */}
       <section className="fs-hero-poster">
@@ -71,7 +76,7 @@ export default function FullStack() {
 
         {/* Slanted Image Reveal at bottom */}
         <div className="fs-hero-slant">
-          <img src="/binary_art.png" alt="Engineering code" className="fs-slant-img" />
+          <img src="/binary_art.webp" alt="Engineering code" className="fs-slant-img" />
         </div>
 
       </section>
