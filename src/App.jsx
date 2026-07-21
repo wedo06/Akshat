@@ -21,7 +21,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollTop />
-      <Cursor />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

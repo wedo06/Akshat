@@ -96,6 +96,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SELECTED WORKS (PROJECTS) ── */}
+      <section className="ht-projects-section reveal">
+        <h2 className="ht-sec-h" style={{ marginBottom: '40px' }}>FEATURED WORKS</h2>
+        <div className="ht-proj-list">
+          <a href="https://teamwedo.vercel.app/" target="_blank" rel="noopener" className="ht-proj-item">
+            <div className="ht-proj-info">
+              <h3>The WeDo Agency</h3>
+              <p>Full-Stack / Agency Platform</p>
+            </div>
+            <div className="ht-proj-arrow">↗</div>
+          </a>
+          <a href="https://margify-ten.vercel.app/" target="_blank" rel="noopener" className="ht-proj-item">
+            <div className="ht-proj-info">
+              <h3>Margify</h3>
+              <p>Full-Stack / Travel Intelligence</p>
+            </div>
+            <div className="ht-proj-arrow">↗</div>
+          </a>
+          <a href="https://stylee-gamma.vercel.app/" target="_blank" rel="noopener" className="ht-proj-item">
+            <div className="ht-proj-info">
+              <h3>Stylee</h3>
+              <p>Full-Stack / Fashion E-Commerce</p>
+            </div>
+            <div className="ht-proj-arrow">↗</div>
+          </a>
+          <a href="https://public.tableau.com/app/profile/akshat.agrawal2260/viz/Airbnb_17773079392460/MarketIntelligence?publish=yes" target="_blank" rel="noopener" className="ht-proj-item">
+            <div className="ht-proj-info">
+              <h3>Staywise</h3>
+              <p>Data / Airbnb Gap Analysis</p>
+            </div>
+            <div className="ht-proj-arrow">↗</div>
+          </a>
+          <a href="https://public.tableau.com/app/profile/akshat.agrawal2260/viz/EVchargingAnalyticalDashboard/Dashboard1" target="_blank" rel="noopener" className="ht-proj-item">
+            <div className="ht-proj-info">
+              <h3>EV Charging</h3>
+              <p>Data / Analytical Dashboard</p>
+            </div>
+            <div className="ht-proj-arrow">↗</div>
+          </a>
+        </div>
+      </section>
+
       {/* ── GIANT CTA ── */}
       <section className="ht-cta-section reveal">
         <h2 className="ht-giant-cta">LET'S<br/>BUILD</h2>

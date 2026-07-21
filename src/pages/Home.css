@@ -127,7 +127,67 @@
 .ht-giant-cta { position: relative; z-index: 2; font-family: 'Space Grotesk', sans-serif; font-size: clamp(80px, 15vw, 250px); font-weight: 900; letter-spacing: -0.05em; color: #111; line-height: 0.85; text-align: center; }
 
 .premium-cta-btn { position: relative; z-index: 2; font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; padding: 24px 60px; border-radius: 100px; background: #111; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, background 0.3s ease; }
-.premium-cta-btn:hover { transform: translateY(-5px) scale(1.02); background: #FF2D2D; box-shadow: 0 20px 40px rgba(255,45,45,0.2); }
+.premium-cta-btn:hover {
+  background: var(--text);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ── SELECTED WORKS (PROJECTS) ── */
+.ht-projects-section {
+  max-width: 1200px;
+  margin: 0 auto 150px auto;
+  padding: 0 4vw;
+}
+.ht-proj-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+.ht-proj-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding-left 0.4s ease, padding-right 0.4s ease, background 0.4s ease;
+}
+.ht-proj-item:hover {
+  background: rgba(0, 0, 0, 0.02);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ht-proj-info h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 5px;
+}
+.ht-proj-info p {
+  font-size: 0.85rem;
+  color: rgba(17, 17, 17, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ht-proj-arrow {
+  font-size: 1.5rem;
+  transition: transform 0.4s ease;
+}
+.ht-proj-item:hover .ht-proj-arrow {
+  transform: translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .ht-proj-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .ht-proj-arrow {
+    align-self: flex-end;
+  }
+}
 
 /* Responsive Grid */
 @media(max-width: 1100px) {

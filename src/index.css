@@ -19,7 +19,7 @@ body {
   background: #FAFAFA;
   color: #111;
   overflow-x: hidden;
-  cursor: none;
+  cursor: auto;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -36,7 +36,7 @@ img {
 button {
   border: none;
   background: none;
-  cursor: none;
+  cursor: pointer;
   font-family: inherit;
 }
 
@@ -87,6 +87,15 @@ button {
   height: 60px;
   background: #fff;
   border-color: transparent;
+}
+
+@media (pointer: coarse), (hover: none) {
+  body, button, a {
+    cursor: auto !important;
+  }
+  .cursor-dot, .cursor-ring {
+    display: none !important;
+  }
 }
 
 /* ─── MODERN NAV ─────────────────────────── */
